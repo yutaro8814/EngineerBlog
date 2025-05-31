@@ -55,7 +55,6 @@ const EditArticle: React.FC = () => {
         const categories: string[] = [];
         categorySnapshots.forEach((doc) => {
           const data = doc.data();
-          categories.push("all"); // "All"を追加
           data.type.forEach((cat: string) => {
             if (!categories.includes(cat)) {
               categories.push(cat);

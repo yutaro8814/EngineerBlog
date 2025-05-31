@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Meta } from "../types/Meta";
 
-const ENDPOINT =
-  "https://6vjbfvw042.execute-api.ap-northeast-1.amazonaws.com/prod/og";
+const ENDPOINT = import.meta.env.VITE_API_ENDPOINT!;
 
 const LinkCard: React.FC<{ url: string }> = ({ url }) => {
   const [meta, setMeta] = useState<Meta | null>(null);
